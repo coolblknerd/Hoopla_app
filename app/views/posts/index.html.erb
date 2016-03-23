@@ -1,0 +1,10 @@
+<h1>Welcome to Hoopla</h1>
+
+<% @posts.each do |post| %>
+
+  <%= post.status %><br>
+  <%= post.created_at %><br>
+  
+<% end %>
+
+<%= link_to "New Post", new_post_path %>
