@@ -2,4 +2,19 @@
 
 <%= @post.status %><br> 
 
+  <h3>Comments</h3>
+
+  <% @post.comments.each do |comment| %>
+
+  <p>Comment:
+    <%= comment.comment %>
+  </p>
+
+  <% end %>
+
+  <h3>Add Comment</h3>
+
+  <%= render 'comments/form'%>
+
 <%= link_to 'Back', root_path %> 
+<%= link_to 'Edit', edit_post_path %>

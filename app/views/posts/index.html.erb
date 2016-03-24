@@ -2,7 +2,7 @@
 
 <% @posts.each do |post| %>
 
-  <%= post.status %><br>
+  <%= link_to post.status, post_path(post) %><br>
   <%= post.created_at %><br>
   
 <% end %>
